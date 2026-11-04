@@ -70,17 +70,17 @@ with st.expander("👤 User Profile & Role Switcher", expanded=False):
         st.session_state.current_user_id = sel_user_id
         st.rerun()
 
+from views.lobbies import render_lobbies_view, render_join_lobby_view
+
 # Navigation Tabs matching screenshot:
 # Lobbies | Join a lobby | Find a match | Ratings | Players | Gameplay Telemetry | Activity Feed | Admin
 tabs = st.tabs(NAVIGATION_TABS)
 
 with tabs[0]:
-    st.markdown("### Lobbies Tab")
-    st.info("Lobbies view loading...")
+    render_lobbies_view()
 
 with tabs[1]:
-    st.markdown("### Join a Lobby Tab")
-    st.info("Join lobby view loading...")
+    render_join_lobby_view()
 
 with tabs[2]:
     st.markdown("### Find a Match Tab")
