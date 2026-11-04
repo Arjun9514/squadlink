@@ -76,6 +76,7 @@ from views.ratings import render_ratings_view
 from views.players import render_players_view
 from views.telemetry import render_telemetry_view
 from views.activity_feed import render_activity_feed_view
+from views.admin import render_admin_view
 
 # Navigation Tabs matching screenshot:
 # Lobbies | Join a lobby | Find a match | Ratings | Players | Gameplay Telemetry | Activity Feed | Admin
@@ -103,5 +104,4 @@ with tabs[6]:
     render_activity_feed_view()
 
 with tabs[7]:
-    st.markdown("### Admin Tab")
-    st.info("Admin view loading...")
+    render_admin_view()
