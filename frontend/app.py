@@ -74,6 +74,8 @@ from views.lobbies import render_lobbies_view, render_join_lobby_view
 from views.matchmaking import render_matchmaking_view
 from views.ratings import render_ratings_view
 from views.players import render_players_view
+from views.telemetry import render_telemetry_view
+from views.activity_feed import render_activity_feed_view
 
 # Navigation Tabs matching screenshot:
 # Lobbies | Join a lobby | Find a match | Ratings | Players | Gameplay Telemetry | Activity Feed | Admin
@@ -95,12 +97,10 @@ with tabs[4]:
     render_players_view()
 
 with tabs[5]:
-    st.markdown("### Gameplay Telemetry Tab")
-    st.info("Telemetry view loading...")
+    render_telemetry_view()
 
 with tabs[6]:
-    st.markdown("### Activity Feed Tab")
-    st.info("Activity feed loading...")
+    render_activity_feed_view()
 
 with tabs[7]:
     st.markdown("### Admin Tab")
