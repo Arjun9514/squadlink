@@ -71,6 +71,7 @@ with st.expander("👤 User Profile & Role Switcher", expanded=False):
         st.rerun()
 
 from views.lobbies import render_lobbies_view, render_join_lobby_view
+from views.matchmaking import render_matchmaking_view
 
 # Navigation Tabs matching screenshot:
 # Lobbies | Join a lobby | Find a match | Ratings | Players | Gameplay Telemetry | Activity Feed | Admin
@@ -83,8 +84,7 @@ with tabs[1]:
     render_join_lobby_view()
 
 with tabs[2]:
-    st.markdown("### Find a Match Tab")
-    st.info("Find a match view loading...")
+    render_matchmaking_view()
 
 with tabs[3]:
     st.markdown("### Ratings Tab")
